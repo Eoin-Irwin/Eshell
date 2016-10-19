@@ -34,13 +34,14 @@ def user_input(choice):
 
 
 def main():
-    subprocess.call('''''', shell=True)
-
     while True:
-        x = raw_input(getpass.getuser() + "@Eshell++:#")
-        x = user_input(x)
+        try:
+            x = raw_input(getpass.getuser() + "@Eshell++:#")
+            x = user_input(x)
 
-        subprocess.call(x, shell=True)
+            subprocess.call(x, shell=True)
+        except EOFError:
+            break
 
 
 if __name__ == '__main__':
