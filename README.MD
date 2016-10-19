@@ -9,3 +9,5 @@ sudo apt-get install python-pip
 then
 
 pip install ipgetter
+
+Alternatively I added in a requirements which can be pip install using pip install -r requirements.txt
