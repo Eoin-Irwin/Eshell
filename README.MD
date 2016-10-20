@@ -1,13 +1,43 @@
-Initially this shell was written using tsh but i've decided to redo my own instead to provide a custom limited shell.
+# Eshell++
 
-If using the external library ipgetter you will need to pip install it..
+A subset of the previous Eshell which used tsh(Tiny Shell)
 
-However if you are on a vanilla linux server (like myself) the initial command you will need is
+It now has been optimised slightly
 
+## Getting Started
+
+Copy the Eshell++ folder onto your server. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+You will need an external library called ipgetter
+
+On some Linux Vanilla servers you may need to install pip first.
+
+```
 sudo apt-get install python-pip
+```
+Then install the requirements text file
 
-then
+```
+pip install -r requirements.txt
+```
 
+Or
+
+```
 pip install ipgetter
+```
 
-Alternatively I added in a requirements which can be pip install using pip install -r requirements.txt
+## Built With
+
+* [Pycharm](http://www.Pycharm.com) - The IDE used
+* [Python](https://www.Python.com/) - Language
+
+## Authors
+
+* **Eoin Irwin**
+
+## License
+
+This project is licensed under the MIT License - see the [LICENCE.md](LICENCE.md) file for details
