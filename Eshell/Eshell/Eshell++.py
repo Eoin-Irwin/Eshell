@@ -1,6 +1,6 @@
-import getpass, subprocess, time, ipgetter, os
+import getpass, time, ipgetter, os
 
-systemCommands = {'pw': 'pwd', 'ifc': 'ifconfig eth0', 'ls': 'ls', 'dt': 'date'}
+systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date'}
 
 
 def get_ip_address():
@@ -24,35 +24,35 @@ def initial_login():
     print 64 * '='
 
 
-initial_login()
+def ifc(choices):
+    if len(x) > 1:
+        os.system('ifconfig {0}'.format(x[1]))
+    else:
+        os.system('ifconfig eth0')
 
 
-def date():
+def date(choices):
     print time.strftime("%Y%m%d%H%M%S")
 
 
-def pwd():
+def pwd(choices):
     os.system('pwd')
 
 
 def user_input(choice):
     for x, y in systemCommands.iteritems():
         if choice[0] == x:
-            eval(y + '()')
+            eval(y + '({0})'.format(choice))
             return True
     return False
 
 
-def main():
-    x = ''
-    while x != 'exit':
-        x = raw_input(getpass.getuser() + "@Eshell++:#")
-        x = x.split(' ')
-        x = user_input(x)
-    if not x:
-        print('Command not found')
+initial_login()
 
-
-if __name__ == '__main__':
-    pass
-main()
+x = ''
+while x != 'exit':
+    x = raw_input(getpass.getuser() + "@Eshell++:#")
+    x = x.split(' ')
+    x = user_input(x)
+if not x:
+    print('Command not found')
