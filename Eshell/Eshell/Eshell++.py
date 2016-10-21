@@ -1,6 +1,6 @@
 import getpass, time, ipgetter, os
 
-systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date'}
+systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date', 'ls': 'ls'}
 
 
 def get_ip_address():
@@ -29,6 +29,13 @@ def ifc(choices):
         os.system('ifconfig {0}'.format(x[1]))
     else:
         os.system('ifconfig eth0')
+
+
+def ls(choices):
+    if len(x) > 1:
+        os.system('ls {0}'.format(x[1]))
+    else:
+        os.system('ls')
 
 
 def date(choices):
