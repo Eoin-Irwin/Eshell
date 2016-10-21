@@ -1,6 +1,6 @@
-import getpass, time, ipgetter, os
+import getpass, time, ipgetter, os, sys
 
-systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date', 'ls': 'ls', 'cmatrix': 'cmatrix',
+systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date', 'ud': 'ud', 'ls': 'ls', 'cmatrix': 'cmatrix',
                   'pacman4console': 'pacman4console', 'nsnake': 'nsnake'}
 
 
@@ -25,14 +25,6 @@ def initial_login():
     print 64 * '='
 
 
-def pacman4console(choices):
-    os.system('pacman4console')
-
-
-def nsnake(choices):
-    os.system('nsnake')
-
-
 def ifc(choices):
     if len(x) > 1:
         os.system('ifconfig {0}'.format(x[1]))
@@ -47,16 +39,24 @@ def ls(choices):
         os.system('ls')
 
 
+def pwd(choices):
+    os.system('pwd')
+
+
 def date(choices):
     print time.strftime("%Y%m%d%H%M%S")
 
 
-def cmatrix(choice):
+def pacman4console(choices):
+    os.system('pacman4console')
+
+
+def nsnake(choices):
+    os.system('nsnake')
+
+
+def cmatrix(choices):
     os.system('cmatrix')
-
-
-def pwd(choices):
-    os.system('pwd')
 
 
 def user_input(choice):
@@ -70,12 +70,13 @@ def user_input(choice):
             print msg
             os.system('logger ' + msg)
             break
+        elif choice[0] == 'exit':
+            sys.exit(0)
     return False
 
 
-initial_login()
-
 x = ''
+initial_login()
 while x != 'exit':
     x = raw_input(getpass.getuser() + "@Eshell++:#")
     x = x.split(' ')
