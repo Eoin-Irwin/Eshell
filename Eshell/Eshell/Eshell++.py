@@ -1,6 +1,6 @@
 import getpass, time, ipgetter, os
 
-systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date', 'ls': 'ls'}
+systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date', 'ls': 'ls', 'cmatrix': 'cmatrix'}
 
 
 def get_ip_address():
@@ -40,6 +40,10 @@ def ls(choices):
 
 def date(choices):
     print time.strftime("%Y%m%d%H%M%S")
+
+
+def cmatrix(choice):
+    os.system('cmatrix')
 
 
 def pwd(choices):
