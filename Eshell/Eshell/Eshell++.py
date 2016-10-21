@@ -1,6 +1,6 @@
 import getpass, time, ipgetter, os, sys
 
-systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date', 'ud': 'ud', 'ls': 'ls', 'cmatrix': 'cmatrix',
+systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date', 'ls': 'ls', 'cmatrix': 'cmatrix',
                   'pacman4console': 'pacman4console', 'nsnake': 'nsnake'}
 
 
