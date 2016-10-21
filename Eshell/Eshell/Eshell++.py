@@ -1,6 +1,7 @@
 import getpass, time, ipgetter, os
 
-systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date', 'ls': 'ls', 'cmatrix': 'cmatrix'}
+systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date', 'ls': 'ls', 'cmatrix': 'cmatrix',
+                  'pacman4console': 'pacman4console'}
 
 
 def get_ip_address():
@@ -22,6 +23,10 @@ def initial_login():
 
         Last login: """ + time.strftime("%a %b %d %H:%M:%S %Y") + ' from', get_ip_address()
     print 64 * '='
+
+
+def pacman4console(choices):
+    os.system('pacman4console')
 
 
 def ifc(choices):
