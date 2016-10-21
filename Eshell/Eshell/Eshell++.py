@@ -1,7 +1,7 @@
 import getpass, time, ipgetter, os
 
 systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date', 'ls': 'ls', 'cmatrix': 'cmatrix',
-                  'pacman4console': 'pacman4console'}
+                  'pacman4console': 'pacman4console', 'nsnake': 'nsnake'}
 
 
 def get_ip_address():
@@ -27,6 +27,10 @@ def initial_login():
 
 def pacman4console(choices):
     os.system('pacman4console')
+
+
+def nsnake(choices):
+    os.system('nsnake')
 
 
 def ifc(choices):
