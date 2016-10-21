@@ -1,7 +1,7 @@
 import getpass, time, ipgetter, os, sys
 
-systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date', 'ls': 'ls', 'cmatrix': 'cmatrix',
-                  'pacman4console': 'pacman4console', 'nsnake': 'nsnake'}
+systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date', 'ls': 'ls', 'cmatrix': 'enter',
+                  'pacman4console': 'pacman', 'nsnake': 'nsnake', 'help': 'help_cmd'}
 
 
 def get_ip_address():
@@ -47,7 +47,7 @@ def date(choices):
     print time.strftime("%Y%m%d%H%M%S")
 
 
-def pacman4console(choices):
+def pacman(choices):
     os.system('pacman4console')
 
 
@@ -55,8 +55,14 @@ def nsnake(choices):
     os.system('nsnake')
 
 
-def cmatrix(choices):
+def enter(choices):
     os.system('cmatrix')
+
+
+def help_cmd(choices):
+    print 'Limited commands available to: ', getpass.getuser()
+    for k, v in systemCommands.iteritems():
+        print k
 
 
 def user_input(choice):
