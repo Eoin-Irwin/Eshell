@@ -38,13 +38,21 @@ sudo tail /var/log/syslog
 ```
 
 A cool visual to look at
+
 ```
 cmatrix
 ```
 
 Bringing back the classics, to play enter
+
 ```
 pacman4console
+```
+
+Another cool one, again, to play enter the following command
+
+```
+nsnake
 ```
 
 ## Built With
