@@ -37,6 +37,11 @@ Reporting users if they attempt to use a sudo command and they don't belong to t
 sudo tail /var/log/syslog
 ```
 
+A cool visual to look at
+```
+cmatrix
+```
+
 ## Built With
 
 * [Pycharm](http://www.Pycharm.com) - The IDE used
