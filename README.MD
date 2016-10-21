@@ -42,6 +42,11 @@ A cool visual to look at
 cmatrix
 ```
 
+Bringing back the classics, to play enter
+```
+pacman4console
+```
+
 ## Built With
 
 * [Pycharm](http://www.Pycharm.com) - The IDE used
