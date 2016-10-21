@@ -29,6 +29,14 @@ Or
 pip install ipgetter
 ```
 
+## Extra Features
+
+Reporting users if they attempt to use a sudo command and they don't belong to that group
+
+```
+sudo tail /var/log/syslog
+```
+
 ## Built With
 
 * [Pycharm](http://www.Pycharm.com) - The IDE used
