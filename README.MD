@@ -60,10 +60,10 @@ nsnake
 * [Pycharm](http://www.Pycharm.com) - The IDE used
 * [Python](https://www.Python.com/) - Language
 
-## Authors
+## Author
 
 * **Eoin Irwin**
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENCE.md](LICENCE.md) file for details
+This project is licensed under the MIT License - see the [LICENCE.MD](LICENCE.MD) file for details
