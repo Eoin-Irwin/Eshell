@@ -131,9 +131,6 @@ def user_input(choice):
             print msg
             os.system('logger ' + msg)
             break
-        elif choice[0] not in systemCommands:
-            print choice, ': Command not found'
-            break
         elif choice[0] == 'exit':
             sys.exit(0)
     return False
@@ -158,6 +155,11 @@ subprocess.call('clear', shell=True)
 x = ''
 initial_login()
 while x != 'exit':
-    x = raw_input(getpass.getuser() + "@Eshell++:#")
-    x = x.split(' ')
-    x = user_input(x)
+    try:
+        x = raw_input(getpass.getuser() + "@Eshell++:#")
+        x = x.split(' ')
+        x = user_input(x)
+    except (EOFError, KeyboardInterrupt):
+        sys.exit(0)
+    else:
+        print 'Command not found'
