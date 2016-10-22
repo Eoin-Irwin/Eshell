@@ -133,7 +133,7 @@ def user_input(choice):
             break
         elif choice[0] == 'exit':
             sys.exit(0)
-    return False
+    return ''
 
 
 def ud(choices):
@@ -161,5 +161,5 @@ while x != 'exit':
         x = user_input(x)
     except (EOFError, KeyboardInterrupt):
         sys.exit(0)
-    else:
+    except:
         print 'Command not found'
