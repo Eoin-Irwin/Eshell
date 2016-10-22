@@ -131,6 +131,9 @@ def user_input(choice):
             print msg
             os.system('logger ' + msg)
             break
+        elif choice[0] not in systemCommands:
+            print choice, ': Command not found'
+            break
         elif choice[0] == 'exit':
             sys.exit(0)
     return False
@@ -158,5 +161,3 @@ while x != 'exit':
     x = raw_input(getpass.getuser() + "@Eshell++:#")
     x = x.split(' ')
     x = user_input(x)
-if not x:
-    print('Command not found')
