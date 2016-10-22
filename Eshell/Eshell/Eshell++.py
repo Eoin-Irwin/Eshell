@@ -142,14 +142,10 @@ def ud(choices):
     :param choices: None
     :return: None
     """
-    uname = subprocess.check_output(['whoami'])
-    uname = uname.strip("\r\n")
-    uid = subprocess.check_output(['id', '-u', '{0}'.format(uname)])
-    uid = uid.strip("\r\n")
-    gid = subprocess.check_output(['id', '-g', '{0}'.format(uname)])
-    gid = gid.strip("\r\n")
-    grpmain = subprocess.check_output(['groups', '{0}'.format(uname)])
-    grpmain = grpmain.split(' ')
+    uname = subprocess.check_output(['whoami']).strip("\r\n")
+    uid = subprocess.check_output(['id', '-u', '{0}'.format(uname)]).strip("\r\n")
+    gid = subprocess.check_output(['id', '-g', '{0}'.format(uname)]).strip("\r\n")
+    grpmain = subprocess.check_output(['groups', '{0}'.format(uname)]).split(' ')
     grpmain = grpmain[2]
     inode = subprocess.check_output(['ls', '-id'])
     print("{0},{1},{2},{3},{4}".format(uid, gid, uname, grpmain, inode))
