@@ -1,7 +1,7 @@
 import getpass, time, ipgetter, os, sys, subprocess
 
 systemCommands = {'pw': 'pwd', 'ifc': 'ifc', 'dt': 'date', 'ls': 'ls', 'cmatrix': 'enter',
-                  'pacman4console': 'pacman', 'nsnake': 'nsnake', 'help': 'help_cmd', 'ud': 'ud'}
+                  'pacman4console': 'pacman', 'nsnake': 'nsnake', 'help': 'help_cmd', 'ud': 'ud', 'clear': 'clear'}
 
 
 def get_ip_address():
@@ -12,6 +12,15 @@ def get_ip_address():
     """
     ip = ipgetter.myip()
     print ip
+
+
+def clear(choices):
+    """
+       Clear the screen
+       :param: None
+       :return: None
+      """
+    os.system('clear')
 
 
 def initial_login():
@@ -133,7 +142,7 @@ def user_input(choice):
             break
         elif choice[0] == 'exit':
             sys.exit(0)
-    return ''
+    return False
 
 
 def ud(choices):
