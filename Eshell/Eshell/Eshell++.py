@@ -151,6 +151,7 @@ def ud(choices):
     print("{0},{1},{2},{3},{4}".format(uid, gid, uname, grpmain, inode))
 
 
+subprocess.call('clear', shell=True)
 x = ''
 initial_login()
 while x != 'exit':
