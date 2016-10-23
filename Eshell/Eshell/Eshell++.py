@@ -135,7 +135,7 @@ def user_input(choice):
             eval(y + '({0})'.format(choice))
             return True
         elif choice[0] == 'sudo':
-            msg = getpass.getuser() + ',invalid permissions, this incident has been reported @ ' + time.strftime(
+            msg = getpass.getuser() + ', you have invalid permissions, incident reported @ ' + time.strftime(
                 "%a %b %d %H:%M:%S %Y")
             print msg
             os.system('logger ' + msg)
