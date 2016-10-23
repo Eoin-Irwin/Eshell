@@ -32,6 +32,7 @@ pip install ipgetter
 ## Extra Features
 
 Reporting users if they attempt to use a sudo command and they don't belong to that group
+(Admin can only view this)
 
 ```
 sudo tail /var/log/syslog
